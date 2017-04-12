@@ -3,12 +3,20 @@ module RedisBrowser
     def root_path
       "#{env['SCRIPT_NAME']}/"
     end
+    def title_window
+      settings.title_window
+    end
+    def title_index
+      settings.title_index
+    end
 
     def js_env
       jsEnv = {
         root_path: root_path,
         connections: settings.connections,
-        connection: params[:connection] || settings.connections.keys.first
+        connection: params[:connection] || settings.connections.keys.first,
+        title_window: title_window,
+        title_index: title_index
       }
 
       "jsEnv = #{MultiJson.dump(jsEnv)};"

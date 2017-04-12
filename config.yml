@@ -1,3 +1,5 @@
+title_window: Dynamic Redis Browser Window Title
+title_index: Dynamic Redis Browser Index Title
 connections:
   localhost:
     url: redis://127.0.0.1:6379/0

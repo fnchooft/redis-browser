@@ -110,6 +110,16 @@ RedisBrowser::Web.class_eval do
 end
 ```
 
+
+## Build GEM for local testing
+
+```bash
+gem build redis-browser.gemspec 
+gem install redis-browser-0.5.1.gem --user-install
+```
+
+This should install in ~/.gem/ruby/(VERSION)/bin.
+
 ## Screenshots
 
 ![Browse keys](https://dl.dropboxusercontent.com/u/70986/redis-browser/2.png)

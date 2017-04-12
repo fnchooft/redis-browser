@@ -10,9 +10,12 @@ require 'redis-browser/web'
 
 module RedisBrowser
   DEFAULTS = {
-    'connections' => {
-      'default' => 'redis://127.0.0.1:6379/0'
-    }
+#    'connections' => {
+#      'default' => 'redis://127.0.0.1:6379/0'
+#    }
+#     'readonly' => true,
+    'title_window' => 'Redis Browser Frontend',
+    'title_index' => 'Redis Browser'
   }
 
   def self.configure(opts)

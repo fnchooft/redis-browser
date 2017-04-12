@@ -1,7 +1,7 @@
 doctype html
 html ng-app="browser"
   head
-    title Redis Browser
+    title #{title_window}
 
     script type="text/javascript" src="#{root_path}js/angular.min.js"
     script type="text/javascript" src="#{root_path}js/ui-bootstrap-tpls-0.2.0.min.js"
@@ -56,8 +56,7 @@ html ng-app="browser"
           button.btn.btn-navbar type="button" data-toggle="collapse" data-target=".nav-collapse"
             span.icon-bar
             span.icon-bar
-          a.brand href="/" Redis Browser
-
+          a.brand href="/" #{title_index}
           .nav-collapse.collapse
             p.pull-right
               button.btn.btn-success ng-click="config.open()" Configure
@@ -190,12 +189,12 @@ html ng-app="browser"
                   td
                     a href="\#{{e.full}}" ng-click="show(e)"
                       ' {{ e.name }}
-                  td
-                    button.btn.btn-danger ng-click="deleteKey(e)" Delete
-                tr
-                  td
-                  td
-                    button.btn.btn-danger ng-click="deleteAll()" Delete ALL
+                  / td
+                    / button.btn.btn-danger ng-click="deleteKey(e)" Delete
+                / tr
+                  / td
+                  / td
+                  /   button.btn.btn-danger ng-click="deleteAll()" Delete ALL
 
 
               / span.alert.alert-danger Key not found
